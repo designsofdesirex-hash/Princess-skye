@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Princess Skye — Haute Royal British Findom Minimalist Design System
-   Dominant Palette: Milky Alabaster, Warm Ivory & Deep Charcoal
+    Princess Skye — Haute Royal British Findom Pink Velvet Design System
+    Dominant Palette: Blush Rose, Powder Pink, Berry & Deep Plum
    Bespoke British Royalty Findom Aesthetic ("You exist to spoil me")
    ========================================================================== */
 
@@ -9,29 +9,32 @@
 
 /* ---- CSS Variables & Design Tokens ------------------------------------- */
 :root {
-  /* Dominant Milky White & Warm Alabaster Palette */
-  --bg-milky: #FAF8F5;
-  --bg-pure: #FFFFFF;
-  --bg-surface: #F5F2EC;
-  --bg-surface-elevated: #EDE8DF;
-  --bg-glass: rgba(250, 248, 245, 0.88);
-  --bg-glass-card: rgba(255, 255, 255, 0.7);
+  /* Dominant blush-pink surfaces */
+  --bg-milky: #FFF1F6;
+  --bg-pure: #FFF9FB;
+  --bg-surface: #F9DCE8;
+  --bg-surface-elevated: #F2BFD3;
+  --bg-glass: rgba(255, 243, 247, 0.9);
+  --bg-glass-card: rgba(255, 249, 251, 0.78);
 
-  /* Refined Charcoal & Jet Typography */
-  --text-primary: #141312;
-  --text-secondary: #4A4642;
-  --text-muted: #544F49;
-  --text-subtle: #736C63;
+  /* Deep plum typography for contrast */
+  --text-primary: #2A1422;
+  --text-secondary: #603B4D;
+  --text-muted: #7F586A;
+  --text-subtle: #A07889;
 
   /* Whispering Hairline Borders */
-  --border-hairline: rgba(20, 19, 18, 0.08);
-  --border-medium: rgba(20, 19, 18, 0.16);
-  --border-focus: rgba(20, 19, 18, 0.9);
+  --border-hairline: rgba(118, 42, 76, 0.16);
+  --border-medium: rgba(118, 42, 76, 0.28);
+  --border-focus: rgba(176, 45, 102, 0.95);
 
-  /* Quiet Luxury Accents */
-  --accent-black: #141312;
-  --accent-cream: #F2EDE4;
-  --accent-gold-tint: #D8CFC4;
+  /* Pink velvet accents */
+  --accent-black: #24121D;
+  --accent-cream: #FFE0EA;
+  --accent-gold-tint: #D997AD;
+  --accent-pink: #C83272;
+  --accent-pink-deep: #8E1F51;
+  --accent-rose: #E987AA;
 
   /* Typography */
   --font-editorial: 'Cormorant Garamond', Garamond, 'Didot', serif;
@@ -70,9 +73,9 @@
   --container-hero: 1280px;
 
   /* Shadows (Ultra-Soft, Diffused Luxury) */
-  --shadow-soft: 0 4px 24px rgba(20, 19, 18, 0.03);
-  --shadow-card: 0 12px 36px rgba(20, 19, 18, 0.05);
-  --shadow-modal: 0 30px 70px rgba(20, 19, 18, 0.12);
+  --shadow-soft: 0 8px 28px rgba(109, 28, 65, 0.1);
+  --shadow-card: 0 16px 42px rgba(109, 28, 65, 0.13);
+  --shadow-modal: 0 30px 70px rgba(54, 13, 34, 0.26);
 
   /* Z-Indices */
   --z-header: 100;
@@ -102,6 +105,7 @@ html {
 body {
   min-height: 100vh;
   background-color: var(--bg-milky);
+  background-image: radial-gradient(circle at 8% 10%, rgba(232, 93, 145, 0.18), transparent 30rem), radial-gradient(circle at 88% 36%, rgba(200, 50, 114, 0.12), transparent 34rem);
   color: var(--text-primary);
   font-weight: 300;
   letter-spacing: 0.01em;
@@ -140,13 +144,13 @@ ul, ol {
 
 /* Selection */
 ::selection {
-  background-color: var(--text-primary);
-  color: var(--bg-milky);
+  background-color: var(--accent-pink);
+  color: #FFF9FB;
 }
 
 /* Accessibility Focus */
 :focus-visible {
-  outline: 1px solid var(--text-primary);
+  outline: 2px solid var(--accent-pink);
   outline-offset: 3px;
 }
 
@@ -290,14 +294,14 @@ ul, ol {
 }
 
 .btn-primary {
-  background-color: var(--text-primary);
-  color: var(--bg-milky);
-  border: 1px solid var(--text-primary);
+  background-color: var(--accent-pink);
+  color: #FFF9FB;
+  border: 1px solid var(--accent-pink);
 }
 
 .btn-primary:hover {
-  background-color: #2C2926;
-  border-color: #2C2926;
+  background-color: var(--accent-pink-deep);
+  border-color: var(--accent-pink-deep);
   transform: translateY(-1px);
 }
 
@@ -308,8 +312,8 @@ ul, ol {
 }
 
 .btn-secondary:hover {
-  border-color: var(--text-primary);
-  background-color: rgba(20, 19, 18, 0.03);
+  border-color: var(--accent-pink);
+  background-color: rgba(200, 50, 114, 0.08);
   transform: translateY(-1px);
 }
 
@@ -736,6 +740,7 @@ ul, ol {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  background: radial-gradient(circle at 82% 48%, rgba(200, 50, 114, 0.2), transparent 27rem), linear-gradient(135deg, #FFF9FB 0%, #FCE3EC 100%);
   padding-top: clamp(110px, 14vh, 150px);
   padding-bottom: clamp(64px, 9vh, 110px);
 }
@@ -847,7 +852,8 @@ ul, ol {
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--border-hairline);
-  background: var(--bg-pure);
+  background: var(--bg-surface-elevated);
+  box-shadow: 0 18px 50px rgba(142, 31, 81, 0.18), 0 0 0 8px rgba(232, 93, 145, 0.08);
   box-shadow: var(--shadow-card);
   aspect-ratio: 4 / 5;
   isolation: isolate;
@@ -1500,6 +1506,60 @@ body #vault {
   }
 }
 
+/* Pink-led surface polish */
+.site-header {
+  background: rgba(255, 249, 251, 0.9);
+  border-bottom-color: rgba(200, 50, 114, 0.18);
+}
+
+.section--border-top {
+  border-top-color: rgba(200, 50, 114, 0.18);
+}
+
+.motto-card {
+  background: linear-gradient(135deg, rgba(255, 249, 251, 0.98), rgba(252, 230, 238, 0.92));
+  border-color: rgba(200, 50, 114, 0.2);
+}
+
+.age-gate__panel {
+  box-shadow: 0 24px 60px rgba(54, 13, 34, 0.3), 0 0 0 8px rgba(232, 93, 145, 0.12);
+}
+
+.links-map {
+  box-shadow: 0 12px 32px rgba(142, 31, 81, 0.1);
+}
+
+#links {
+  background: linear-gradient(180deg, rgba(249, 220, 232, 0.58), rgba(255, 249, 251, 0.94));
+}
+
+#about {
+  background: linear-gradient(135deg, rgba(242, 191, 211, 0.36), rgba(255, 241, 246, 0.72));
+}
+
+.channel-showcase-grid {
+  position: relative;
+}
+
+.channel-showcase-grid::before {
+  position: absolute;
+  inset: 12% 30% auto;
+  height: 16rem;
+  content: '';
+  background: radial-gradient(circle, rgba(232, 93, 145, 0.16), transparent 68%);
+  pointer-events: none;
+  filter: blur(12px);
+  z-index: 0;
+}
+
+.channel-showcase-card {
+  z-index: 1;
+}
+
+.links-map strong {
+  color: var(--accent-pink-deep);
+}
+
 /* Refined closing panel: unify the portrait and sign-off into one composed surface. */
 .site-footer {
   position: relative;
@@ -1864,7 +1924,7 @@ body #vault {
   padding-left: clamp(24px, 3.5vw, 32px);
   padding-right: clamp(24px, 3.5vw, 32px);
   padding: clamp(28px, 4vw, 36px) clamp(24px, 3.5vw, 32px);
-  box-shadow: 0 16px 40px -12px rgba(20, 19, 18, 0.06), 0 2px 6px rgba(20, 19, 18, 0.02);
+  box-shadow: 0 16px 40px -12px rgba(142, 31, 81, 0.14), 0 2px 6px rgba(142, 31, 81, 0.06);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1876,8 +1936,8 @@ body #vault {
 
 .channel-showcase-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 24px 60px -15px rgba(20, 19, 18, 0.1), 0 4px 12px rgba(20, 19, 18, 0.03);
-  border-color: var(--border-medium);
+  box-shadow: 0 24px 60px -15px rgba(142, 31, 81, 0.22), 0 4px 12px rgba(142, 31, 81, 0.08);
+  border-color: var(--accent-pink);
 }
 
 .channel-showcase-card__top {
@@ -1896,7 +1956,7 @@ body #vault {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-primary);
+  color: var(--accent-pink-deep);
   box-shadow: var(--shadow-soft);
   transition: transform var(--dur-fast) var(--ease-out);
 }
@@ -1910,7 +1970,7 @@ body #vault {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--text-muted);
+  color: var(--accent-pink-deep);
   background: var(--bg-surface);
   border: 1px solid var(--border-hairline);
   padding: 4px 10px;
@@ -1947,8 +2007,8 @@ body #vault {
 
 .channel-handle-chip:hover {
   color: var(--text-primary);
-  background: rgba(20, 19, 18, 0.05);
-  border-color: var(--border-medium);
+  background: rgba(200, 50, 114, 0.1);
+  border-color: var(--accent-pink);
 }
 
 .channel-handle-chip:active {
@@ -2013,4 +2073,68 @@ body #vault {
   .links-map {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+/* Final pink art direction layer: intentionally last so it wins the cascade. */
+html,
+body {
+  background-color: #FFF1F6;
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 8% 10%, rgba(232, 93, 145, 0.22), transparent 30rem),
+    radial-gradient(circle at 88% 36%, rgba(200, 50, 114, 0.16), transparent 34rem),
+    linear-gradient(135deg, #FFF9FB 0%, #FFF1F6 52%, #F9DCE8 100%);
+}
+
+.site-header {
+  background: rgba(255, 241, 246, 0.94);
+  border-bottom-color: rgba(200, 50, 114, 0.24);
+}
+
+.hero {
+  background:
+    radial-gradient(circle at 84% 48%, rgba(200, 50, 114, 0.25), transparent 28rem),
+    linear-gradient(135deg, #FFF9FB 0%, #FCE3EC 100%);
+}
+
+#about {
+  background: linear-gradient(135deg, #F2BFD3 0%, #FCE3EC 46%, #FFF1F6 100%);
+}
+
+#links {
+  background: linear-gradient(180deg, #F9DCE8 0%, #FFF1F6 100%);
+}
+
+.motto-card,
+.channel-showcase-card {
+  background: rgba(255, 249, 251, 0.88);
+  border-color: rgba(200, 50, 114, 0.24);
+}
+
+.btn-primary {
+  background-color: #C83272;
+  border-color: #C83272;
+  color: #FFF9FB;
+}
+
+.btn-primary:hover {
+  background-color: #8E1F51;
+  border-color: #8E1F51;
+}
+
+.links-map {
+  background: rgba(200, 50, 114, 0.24);
+  border-color: rgba(200, 50, 114, 0.3);
+}
+
+.links-map span {
+  background: rgba(255, 249, 251, 0.9);
+}
+
+.links-map strong,
+.channel-showcase-card__tag,
+.channel-showcase-card__icon-box {
+  color: #8E1F51;
 }
