@@ -32,7 +32,7 @@
       nav_overview: "Overview",
       hero_eyebrow: "18 YO BRATTY BRITISH FINDOM PRINCESS · EST. 2025",
       hero_kicker: "18-Year-Old Bratty British Findom Princess · Est. 2025",
-      hero_desc: "Bratty, demanding, and utterly irresistible. Welcome to my official sanctuary. Remember your place: you exist to spoil me.",
+      hero_desc: "Bratty, demanding, and utterly irresistible. Welcome to my official sanctuary.",
       hero_btn_revolut: "Spoil on Revolut ↗",
       hero_btn_debt: "Debt Ledger ↗",
       hero_btn_loyalfans: "LoyalFans VIP ↗",

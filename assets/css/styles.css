@@ -357,9 +357,12 @@ ul, ol {
   align-items: center;
   justify-content: center;
   padding: var(--space-4);
-  background: rgba(250, 248, 245, 0.88);
-  backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
+  background-color: #171218;
+  background-image: linear-gradient(90deg, rgba(17, 12, 18, 0.9) 0%, rgba(17, 12, 18, 0.72) 50%, rgba(17, 12, 18, 0.84) 100%), url('../img/skye_02.jpg');
+  background-size: cover;
+  background-position: center 28%;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   transition: opacity var(--dur-slow) var(--ease-out), visibility var(--dur-slow) var(--ease-out);
 }
 
@@ -370,8 +373,8 @@ ul, ol {
 }
 
 .age-gate__panel {
-  background: var(--bg-pure);
-  border: 1px solid var(--border-hairline);
+  background: rgba(250, 248, 245, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: var(--radius-lg);
   max-width: 440px;
   width: 100%;
@@ -1021,9 +1024,6 @@ ul, ol {
 
 
 /* ---- Curated Media Vault ------------------------------------------------ */
-#vault {
-  display: none !important;
-}
 
 .vault-tabs {
   display: flex;
@@ -1356,13 +1356,67 @@ ul, ol {
   padding-block: clamp(48px, 6vw, 84px) var(--space-6);
 }
 
+/* Media vault is intentionally dormant until the gallery is activated. */
+body #vault {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
 .footer-top {
+  display: block;
+  margin-bottom: var(--space-7);
+}
+
+.footer-feature {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(28px, 6vw, 84px);
+  align-items: stretch;
+  margin-bottom: clamp(36px, 6vw, 72px);
+}
+
+.footer-feature__image-wrap {
+  min-height: 420px;
+  overflow: hidden;
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+}
+
+.footer-feature__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  object-position: center 28%;
+  filter: saturate(0.9) contrast(1.04);
+}
+
+.footer-feature__content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
-  align-items: center;
-  text-align: center;
-  margin-bottom: var(--space-7);
+  align-items: flex-start;
+  justify-content: center;
+  padding-block: var(--space-5);
+}
+
+.footer-signoff {
+  max-width: 28rem;
+  margin-top: var(--space-4);
+  color: var(--text-secondary);
+  font-family: var(--font-editorial);
+  font-size: clamp(1.4rem, 2.4vw, 2.35rem);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.footer-feature__cta {
+  margin-top: var(--space-6);
 }
 
 .footer-brand-name {
@@ -1390,6 +1444,13 @@ ul, ol {
   text-transform: uppercase;
 }
 
+.footer-links-row--primary {
+  justify-content: flex-start;
+  gap: 12px 24px;
+  padding-block: var(--space-5);
+  border-block: 1px solid var(--border-hairline);
+}
+
 .footer-links-row a {
   color: var(--text-secondary);
 }
@@ -1415,6 +1476,167 @@ ul, ol {
   .footer-bottom {
     flex-direction: row;
     text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-feature {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .footer-feature__image-wrap,
+  .footer-feature__image {
+    min-height: 360px;
+  }
+
+  .footer-feature__content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links-row--primary {
+    justify-content: center;
+  }
+}
+
+/* Refined closing panel: unify the portrait and sign-off into one composed surface. */
+.site-footer {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--text-primary);
+  background-image: linear-gradient(90deg, rgba(14, 10, 14, 0.985) 0%, rgba(14, 10, 14, 0.95) 42%, rgba(14, 10, 14, 0.78) 100%), url('../img/skye_19.jpg');
+  background-size: cover;
+  background-position: 72% 30%;
+  border-top-color: var(--text-primary);
+  color: var(--bg-milky);
+}
+
+.site-footer > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-identity {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-5);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.footer-identity .footer-motto {
+  margin: 0;
+  text-align: right;
+}
+
+.footer-feature {
+  display: block;
+  min-height: 430px;
+  padding: clamp(36px, 7vw, 92px) clamp(28px, 7vw, 96px);
+  background: rgba(18, 14, 18, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-md);
+}
+
+.footer-feature__image-wrap {
+  display: none;
+}
+
+.footer-feature__image {
+  min-height: 500px;
+  object-position: center 24%;
+  filter: saturate(0.82) contrast(1.08);
+}
+
+.footer-feature__content {
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 330px;
+  padding: 0;
+}
+
+.footer-brand-name {
+  color: var(--bg-milky);
+  font-size: clamp(1.45rem, 2.3vw, 2rem);
+  letter-spacing: 0.2em;
+}
+
+.footer-motto {
+  color: rgba(255, 248, 244, 0.68);
+  font-size: 0.95rem;
+}
+
+.footer-signoff {
+  color: var(--bg-milky);
+  font-size: clamp(1.55rem, 2.7vw, 2.7rem);
+  line-height: 1.08;
+}
+
+.footer-links-row--primary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  border-block-color: transparent;
+}
+
+.footer-links-row--primary a {
+  padding: 8px 12px;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-links-row--primary a:nth-child(4n + 1) {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.footer-links-row a {
+  color: rgba(255, 248, 244, 0.7);
+}
+
+.footer-links-row a:hover {
+  color: var(--bg-milky);
+}
+
+.footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.16);
+  color: rgba(255, 248, 244, 0.54);
+}
+
+@media (max-width: 767px) {
+  .footer-identity {
+    display: block;
+  }
+
+  .footer-identity .footer-motto {
+    margin-top: 8px;
+    text-align: left;
+  }
+
+  .footer-feature {
+    min-height: 440px;
+    padding: 38px 24px;
+  }
+
+  .footer-feature__content {
+    min-height: 360px;
+    padding: 0;
+  }
+
+  .footer-links-row--primary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-links-row--primary a:nth-child(4n + 1) {
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    padding-left: 12px;
+  }
+
+  .footer-links-row--primary a:nth-child(2n + 1) {
+    border-left: 0;
+    padding-left: 0;
   }
 }
 
