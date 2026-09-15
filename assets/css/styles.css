@@ -1122,10 +1122,11 @@ ul, ol {
   position: fixed;
   inset: 0;
   z-index: var(--z-modal);
-  background: rgba(250, 248, 245, 0.96);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: rgba(12, 11, 10, 0.94);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: var(--space-5);
@@ -1143,17 +1144,24 @@ ul, ol {
   position: absolute;
   top: var(--space-5);
   right: var(--space-5);
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
-  background: var(--bg-pure);
-  border: 1px solid var(--border-hairline);
-  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FAF8F5;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  box-shadow: var(--shadow-soft);
+  font-size: 1.25rem;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox__close:hover {
+  background: rgba(255, 255, 255, 0.24);
+  transform: scale(1.06);
 }
 
 .lightbox__prev,
@@ -1161,17 +1169,18 @@ ul, ol {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
-  background: var(--bg-pure);
-  border: 1px solid var(--border-hairline);
-  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FAF8F5;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
-  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 .lightbox__prev { left: var(--space-5); }
@@ -1179,28 +1188,31 @@ ul, ol {
 
 .lightbox__content {
   max-width: 90vw;
-  max-height: 85vh;
+  max-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .lightbox__content img,
 .lightbox__content video {
   max-width: 100%;
-  max-height: 75vh;
+  max-height: 72vh;
   object-fit: contain;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-modal);
-  border: 1px solid var(--border-hairline);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .lightbox__caption {
-  margin-top: var(--space-4);
+  margin-top: var(--space-3);
   font-family: var(--font-editorial);
-  font-size: 1.25rem;
-  color: var(--text-primary);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #FAF8F5;
   text-align: center;
+  letter-spacing: -0.01em;
 }
 
 /* ---- The Sovereign Protocol -------------------------------------------- */

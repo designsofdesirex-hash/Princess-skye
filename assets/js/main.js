@@ -572,7 +572,8 @@
 
     const openLightbox = (type, src, title) => {
       mediaContainer.innerHTML = '';
-      if (type === 'video') {
+      const isVideo = type === 'videos' || type === 'video' || (src && src.endsWith('.mp4'));
+      if (isVideo) {
         const vid = document.createElement('video');
         vid.src = src;
         vid.controls = true;
