@@ -737,12 +737,46 @@ ul, ol {
 
 /* ---- Editorial Hero Section -------------------------------------------- */
 .hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   min-height: 100vh;
   display: flex;
   align-items: center;
   background: radial-gradient(circle at 82% 48%, rgba(200, 50, 114, 0.2), transparent 27rem), linear-gradient(135deg, #FFF9FB 0%, #FCE3EC 100%);
   padding-top: clamp(110px, 14vh, 150px);
   padding-bottom: clamp(64px, 9vh, 110px);
+}
+
+.hero::before,
+.hero::after {
+  position: absolute;
+  z-index: 0;
+  content: '';
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(18px);
+}
+
+.hero::before {
+  width: min(48vw, 640px);
+  height: min(48vw, 640px);
+  top: 12%;
+  right: -10%;
+  background: radial-gradient(circle at 35% 35%, rgba(235, 106, 157, 0.62), rgba(200, 50, 114, 0.16) 52%, transparent 72%);
+}
+
+.hero::after {
+  width: min(34vw, 460px);
+  height: min(34vw, 460px);
+  bottom: -18%;
+  left: -8%;
+  background: radial-gradient(circle, rgba(142, 31, 81, 0.34), transparent 70%);
+}
+
+.hero__grid {
+  position: relative;
+  z-index: 1;
 }
 
 .hero__grid {
@@ -1534,7 +1568,23 @@ body #vault {
 }
 
 #about {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   background: linear-gradient(135deg, rgba(242, 191, 211, 0.36), rgba(255, 241, 246, 0.72));
+}
+
+#about::before {
+  position: absolute;
+  top: -30%;
+  right: -8%;
+  width: min(54vw, 760px);
+  height: 130%;
+  content: '';
+  background: radial-gradient(ellipse, rgba(232, 93, 145, 0.22), transparent 66%);
+  filter: blur(26px);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .channel-showcase-grid {
@@ -2078,39 +2128,105 @@ body #vault {
 /* Final pink art direction layer: intentionally last so it wins the cascade. */
 html,
 body {
-  background-color: #FFF1F6;
+  background-color: #24101D;
 }
 
 body {
   background-image:
-    radial-gradient(circle at 8% 10%, rgba(232, 93, 145, 0.22), transparent 30rem),
-    radial-gradient(circle at 88% 36%, rgba(200, 50, 114, 0.16), transparent 34rem),
-    linear-gradient(135deg, #FFF9FB 0%, #FFF1F6 52%, #F9DCE8 100%);
+    radial-gradient(ellipse at 78% 16%, rgba(216, 61, 125, 0.42), transparent 30rem),
+    radial-gradient(ellipse at 12% 48%, rgba(142, 31, 81, 0.5), transparent 34rem),
+    radial-gradient(ellipse at 50% 110%, rgba(233, 135, 170, 0.2), transparent 40rem),
+    linear-gradient(135deg, #24101D 0%, #3D142B 48%, #24101D 100%);
 }
 
 .site-header {
-  background: rgba(255, 241, 246, 0.94);
-  border-bottom-color: rgba(200, 50, 114, 0.24);
+  background: rgba(36, 16, 29, 0.9);
+  border-bottom-color: rgba(233, 135, 170, 0.25);
+  color: #FFF1F6;
+}
+
+.site-header__brand-name,
+.desktop-nav .nav-link {
+  color: #FFF1F6;
+}
+
+.desktop-nav .nav-link:hover,
+.site-header__brand:hover .site-header__brand-name {
+  color: #E987AA;
 }
 
 .hero {
   background:
-    radial-gradient(circle at 84% 48%, rgba(200, 50, 114, 0.25), transparent 28rem),
-    linear-gradient(135deg, #FFF9FB 0%, #FCE3EC 100%);
+    radial-gradient(ellipse at 82% 45%, rgba(232, 93, 145, 0.5), transparent 28rem),
+    linear-gradient(135deg, #FFF1F6 0%, #F4C5D7 48%, #D46B98 100%);
 }
 
 #about {
-  background: linear-gradient(135deg, #F2BFD3 0%, #FCE3EC 46%, #FFF1F6 100%);
+  background:
+    radial-gradient(ellipse at 18% 30%, rgba(233, 135, 170, 0.26), transparent 28rem),
+    linear-gradient(135deg, rgba(93, 25, 61, 0.96), rgba(54, 18, 39, 0.98));
+  color: #FFF1F6;
+}
+
+#about .motto-card {
+  background: rgba(255, 241, 246, 0.1);
+  border-color: rgba(233, 135, 170, 0.28);
+  box-shadow: 0 24px 70px rgba(12, 3, 9, 0.24);
+}
+
+#about .motto-card * {
+  color: #FFF1F6;
+}
+
+#about > .container {
+  position: relative;
+  z-index: 1;
 }
 
 #links {
-  background: linear-gradient(180deg, #F9DCE8 0%, #FFF1F6 100%);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 86% 18%, rgba(216, 61, 125, 0.28), transparent 30rem),
+    linear-gradient(180deg, #F2BFD3 0%, #FFF1F6 100%);
+}
+
+#links::before,
+#links::after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(22px);
+  z-index: 0;
+}
+
+#links::before {
+  width: 32rem;
+  height: 32rem;
+  top: -12rem;
+  right: -10rem;
+  background: rgba(200, 50, 114, 0.28);
+}
+
+#links::after {
+  width: 24rem;
+  height: 24rem;
+  bottom: -12rem;
+  left: -8rem;
+  background: rgba(142, 31, 81, 0.16);
+}
+
+#links > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .motto-card,
 .channel-showcase-card {
-  background: rgba(255, 249, 251, 0.88);
-  border-color: rgba(200, 50, 114, 0.24);
+  background: rgba(255, 249, 251, 0.9);
+  border-color: rgba(142, 31, 81, 0.28);
 }
 
 .btn-primary {
