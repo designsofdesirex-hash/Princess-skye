@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://princess-skye.netlify.app/sitemap.xml
