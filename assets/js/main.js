@@ -234,32 +234,42 @@
   // --------------------------------------------------------------------------
   // 5. HERO IMAGE CROSSFADE SWITCHER (44 Authentic Skye Photos)
   // --------------------------------------------------------------------------
-  // 6. HERO IMAGE CYCLER (44 Authentic Skye Photos)
+  // 6. HERO IMAGE CYCLER (Available Skye Photos)
   // --------------------------------------------------------------------------
   const initHeroImageSwitcher = () => {
     const primaryImg = getEl('#heroPrimaryImg');
     if (!primaryImg) return;
 
-    // Load all 44 optimized Princess Skye photos
-    const images = Array.from({ length: 44 }, (_, i) => `assets/img/skye_${String(i + 1).padStart(2, '0')}.jpg`);
+    // Keep this list in sync with the image files that are present in assets/img.
+    const images = [
+      'assets/img/skye_02.jpg', 'assets/img/skye_06.jpg', 'assets/img/skye_08.jpg',
+      'assets/img/skye_09.jpg', 'assets/img/skye_12.jpg', 'assets/img/skye_18.jpg',
+      'assets/img/skye_19.jpg', 'assets/img/skye_20.jpg', 'assets/img/skye_23.jpg',
+      'assets/img/skye_24.jpg', 'assets/img/skye_26.jpg', 'assets/img/skye_28.jpg',
+      'assets/img/skye_32.jpg', 'assets/img/skye_33.jpg', 'assets/img/skye_34.jpg',
+      'assets/img/skye_36.jpg', 'assets/img/skye_38.jpg', 'assets/img/skye_44.jpg'
+    ];
 
     // Preload top glamour portraits immediately
     const priorityPreload = [
-      'assets/img/skye_30.jpg',
+      'assets/img/skye_19.jpg',
       'assets/img/skye_23.jpg',
       'assets/img/skye_08.jpg',
-      'assets/img/skye_21.jpg',
-      'assets/img/skye_04.jpg',
+      'assets/img/skye_02.jpg',
       'assets/img/skye_18.jpg',
-      'assets/img/skye_40.jpg'
+      'assets/img/skye_44.jpg'
     ];
     priorityPreload.forEach(src => {
       const img = new Image();
       img.src = src;
     });
 
-    let currentIndex = 29; // Starts on skye_30.jpg
+    let currentIndex = Math.floor(Math.random() * images.length);
     let timer = null;
+
+    // Pick the first image immediately so the hero does not always begin on the
+    // static HTML fallback image.
+    primaryImg.src = images[currentIndex];
 
     const switchImage = () => {
       let nextIndex;
