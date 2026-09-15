@@ -1,7 +1,7 @@
 /**
  * Princess Skye — Official Website Core JavaScript
  * 18 YO Bratty British Findom Princess · "You exist to spoil me"
- * Minimalist Haute Luxury Experience (Bilingual EN / DE)
+ * Minimalist Haute Luxury Experience (English)
  */
 (function () {
   'use strict';
@@ -14,7 +14,7 @@
   const on = (el, type, handler, opts) => el && el.addEventListener(type, handler, opts);
 
   // --------------------------------------------------------------------------
-  // 1. INTERNATIONALIZATION (EN / DE)
+  // 1. ENGLISH COPY
   // --------------------------------------------------------------------------
   const translations = {
     en: {
@@ -31,6 +31,7 @@
       nav_cta: "Spoil on Revolut",
       nav_overview: "Overview",
       hero_eyebrow: "18 YO BRATTY BRITISH FINDOM PRINCESS · EST. 2025",
+      hero_kicker: "18-Year-Old Bratty British Findom Princess · Est. 2025",
       hero_desc: "Bratty, demanding, and utterly irresistible. Welcome to my official sanctuary. Remember your place: you exist to spoil me.",
       hero_btn_revolut: "Spoil on Revolut ↗",
       hero_btn_debt: "Debt Ledger ↗",
@@ -123,112 +124,6 @@
       toast_copied: "Copied: ",
       toast_tribute: "Tribute brief copied! Opening platform..."
     },
-    de: {
-      age_title: "Königliche Altersbestätigung",
-      age_desc: "Dieses Heiligtum enthält 18+ Adult Findom Inhalte. Du musst mindestens 18 Jahre alt sein, um das Reich von Princess Skye zu betreten.",
-      age_enter: "Ich bin 18+ — Reich betreten",
-      age_exit: "Website verlassen",
-      age_meta: 'Streng 18+ · <a href="content-notice.html">Inhaltshinweis</a> &amp; <a href="terms.html">AGB</a>',
-      nav_about: "Über Skye",
-      nav_channels: "Kanäle",
-      nav_vault: "Medien-Vault",
-      nav_debt: "Schuldenbuch",
-      nav_spoil: "Tributabsicht",
-      nav_cta: "Tribut via Revolut",
-      nav_overview: "Übersicht",
-      hero_eyebrow: "18-JÄHRIGE BRATTY BRITISH FINDOM PRINCESS · SEIT 2025",
-      hero_desc: "Verwöhnt, fordernd und absolut unwiderstehlich. Willkommen in meinem Reich. Vergiss nie: Du existierst, um mich zu verwöhnen.",
-      hero_btn_revolut: "Auf Revolut verwöhnen ↗",
-      hero_btn_debt: "Schuldenbuch ↗",
-      hero_btn_loyalfans: "LoyalFans VIP ↗",
-      hero_caption: "British Findom Royalty",
-      motto_1: "Mit Königen verhandelt man nicht.",
-      motto_2: "Du existierst, um <em>mich zu verwöhnen.</em>",
-      motto_3: "Zahle deine Tribute, begleiche Schulden und kenne deinen Platz.",
-      channels_eyebrow: "Verifizierte Endpunkte",
-      channels_title: "Ihre einzigen offiziellen Links",
-      channels_desc: "Achtung vor Fake-Profilen. Hier findest du die EINZIGEN verifizierten Profile, Spoil-Kanäle und Wunschlisten von Princess Skye.",
-      card_lf_badge: "VIP &amp; DIREKT-CHAT",
-      card_lf_title: "LoyalFans",
-      card_lf_desc: "Exklusiver Feed, unzensierte Videos, PPV-Inhalte und privater 1-zu-1-Austausch mit Princess Skye.",
-      card_lf_btn: "LoyalFans öffnen ↗",
-      card_dk_badge: "FINSUB SCHULDENBUCH",
-      card_dk_title: "DebtKeeper",
-      card_dk_desc: "Offizielle Finsub-Schuldenverwaltung. Verpflichte dich, trage Schulden ab und diene deiner Prinzessin.",
-      card_dk_btn: "Schuldenbuch öffnen ↗",
-      card_fv_badge: "VIP ABONNEMENT",
-      card_fv_title: "Fanvue",
-      card_fv_desc: "HD-Fotostrecken, regelmäßige Updates, exklusive Einblicke und dauerhafter Zugang zu Skyes Welt.",
-      card_fv_btn: "Fanvue beitreten ↗",
-      card_rev_badge: "SOFORT-TRIBUT",
-      card_rev_title: "Revolut",
-      card_rev_desc: "Direkte und blitzschnelle Bargeld-Tribute. Finanziere Skyes Shopping-Wünsche und Launen ohne Reibung.",
-      card_rev_btn: "Auf Revolut senden ↗",
-      card_pp_badge: "DIREKTE ZAHLUNG",
-      card_pp_title: "PayPal",
-      card_pp_desc: "Schnelle internationale Tribute. Freiwillige finanzielle Unterwerfung direkt via PayPal Me.",
-      card_pp_btn: "Via PayPal senden ↗",
-      card_amz_badge: "WUNSCHLISTE",
-      card_amz_title: "Amazon UK Wishlist",
-      card_amz_desc: "Ausgewählte Designer-Artikel, Mode und Luxusgeschenke, direkt und diskret an Princess Skye geliefert.",
-      card_amz_btn: "Von Amazon schenken ↗",
-      card_th_badge: "DISKRETE GESCHENKE",
-      card_th_title: "Throne Wishlist",
-      card_th_desc: "Verifizierte, diskrete Geschenk- und Crowdfunding-Plattform für Luxusziele und Wünsche.",
-      card_th_btn: "Throne ansehen ↗",
-      card_x_badge: "OFFIZIELLER HAUPTACCOUNT",
-      card_x_title: "X (Twitter) Main",
-      card_x_desc: "Skyes öffentliche Bühne. Tägliche Findom-Gedanken, Lifestyle-Updates und spontane Tribut-Aufrufe.",
-      card_x_btn: "Auf X folgen (@princessskyexxx) ↗",
-      card_xb_badge: "BACKUP-ACCOUNT",
-      card_xb_title: "X Backup Account",
-      card_xb_desc: "Offizieller Backup-Account. Folge hier für ununterbrochene Erreichbarkeit und wichtige Updates.",
-      card_xb_btn: "Backup folgen (@Skyesbackup_x) ↗",
-      vault_eyebrow: "EXKLUSIV &amp; TEASER",
-      vault_title: "Königlicher Medien-Vault",
-      vault_desc: "Offizielle Vorschau-Clips und Fotos von Princess Skye. Vollständige unzensierte Videosets auf LoyalFans &amp; Fanvue.",
-      vault_tab_all: "Alle Vorschauen",
-      vault_tab_videos: "Video-Teaser",
-      vault_tab_photos: "Fotogalerie",
-      spoil_eyebrow: "Finanzielle Unterwerfung",
-      spoil_title: "Tribut-Erklärung &amp; Absicht",
-      spoil_desc: "Erkläre deinen Tribut an Princess Skye. Wähle die Plattform, bestimme deinen Betrag und generiere dein Tribut-Briefing.",
-      banner_title: "Tribut-Briefing kopiert &amp; Weiterleitung",
-      banner_desc: "Deine Erklärung wurde in die Zwischenablage kopiert. Füge sie deiner Zahlung bei.",
-      label_name: "Dein Finsub-Name / Alias <span>(optional)</span>",
-      ph_name: "Wie soll Princess Skye dich nennen?",
-      label_contact: "Dein Social Handle <span>(optional)</span>",
-      ph_contact: "z.B. @DeinHandle auf X / LoyalFans",
-      label_channel: "Tribut-Kanal <span>(erforderlich)</span>",
-      label_budget: "Tributhöhe / Gabe <span>(optional)</span>",
-      opt_bdg_1: "50 £ (Kaffee &amp; Spoil)",
-      opt_bdg_2: "100 £ (Brat Tribute)",
-      opt_bdg_3: "250 £ (Shopping-Kasse)",
-      opt_bdg_4: "500 £ (Designer-Luxus)",
-      opt_bdg_5: "1.000 £+ (Princess VIP)",
-      opt_bdg_6: "Wunschlisten-Artikel gekauft",
-      label_service: "Grund der Unterwerfung <span>(optional)</span>",
-      opt_srv_1: 'Bedingungsloses Verwöhnen ("You exist to spoil me")',
-      opt_srv_2: "Schuldentilgung / DebtKeeper Balance",
-      opt_srv_3: "Geschenkerfüllung (Amazon / Throne)",
-      opt_srv_4: "VIP Content &amp; Abonnement-Freischaltung",
-      opt_srv_5: "Individuelle Demütigung / Findom-Anfrage",
-      label_details: "Ergebene Nachricht <span>(optional)</span>",
-      ph_details: "Erkläre deine Ergebenheit oder nenne Referenzdaten deiner Zahlung...",
-      terms_text: "Ich bestätige, dass ich mindestens 18 Jahre alt bin und alle Tribute 100% freiwillige, unentgeltliche Schenkungen ohne Rückerstattungsanspruch sind. <strong>(erforderlich)</strong>",
-      btn_submit: "Tribut-Briefing kopieren &amp; Plattform öffnen",
-      btn_quick_rev: "Sofort: Revolut ↗",
-      btn_quick_dk: "Schulden: DebtKeeper ↗",
-      btn_quick_lf: "Nachricht: LoyalFans ↗",
-      footer_motto: '18 YO Bratty British Findom Princess · "You exist to spoil me"',
-      legal_notice: "Inhaltshinweis (18+)",
-      legal_terms: "AGB &amp; Richtlinien",
-      legal_privacy: "Datenschutz",
-      legal_cookies: "Cookies",
-      footer_copyright: "&copy; 2025–2026 Princess Skye. Alle Rechte vorbehalten. Streng 18+ Erwachsenenunterhaltung.",
-      toast_copied: "Kopiert: ",
-      toast_tribute: "Tribut-Briefing kopiert! Plattform wird geöffnet..."
-    }
   };
 
   let currentLang = 'en';
@@ -241,12 +136,6 @@
     } catch (e) {}
 
     document.documentElement.lang = lang;
-
-    getEls('[data-lang-switch]').forEach(btn => {
-      const isActive = btn.getAttribute('data-lang-switch') === lang;
-      btn.classList.toggle('is-active', isActive);
-      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-    });
 
     const dict = translations[lang];
     getEls('[data-i18n]').forEach(el => {
@@ -264,21 +153,7 @@
     });
   };
 
-  const initI18n = () => {
-    let saved = 'en';
-    try {
-      saved = localStorage.getItem('qe_lang') || (navigator.language && navigator.language.startsWith('de') ? 'de' : 'en');
-    } catch (e) {}
-
-    getEls('[data-lang-switch]').forEach(btn => {
-      on(btn, 'click', () => {
-        const lang = btn.getAttribute('data-lang-switch');
-        setLanguage(lang);
-      });
-    });
-
-    setLanguage(saved);
-  };
+  const initI18n = () => setLanguage('en');
 
   // --------------------------------------------------------------------------
   // 2. AGE GATE
@@ -388,81 +263,13 @@
   };
 
   // --------------------------------------------------------------------------
-  // 5. TRIBUTE INTENT & SPOIL SUBMISSION SYSTEM
+  // 5. HERO IMAGE CROSSFADE SWITCHER (44 Authentic Skye Photos)
   // --------------------------------------------------------------------------
-  const initBookingSystem = () => {
-    const form = getEl('#booking-form');
-    if (!form) return;
-
-    const banner = getEl('#booking-success');
-
-    on(form, 'submit', async e => {
-      e.preventDefault();
-
-      const name = getEl('#book-name')?.value.trim() || 'Anonymous Finsub';
-      const contact = getEl('#book-contact')?.value.trim() || 'N/A';
-      const platform = getEl('#book-platform')?.value || 'Revolut (@skye_k08)';
-      const budget = getEl('#book-budget')?.value || 'Standard Spoil';
-      const service = getEl('#book-service')?.value || 'Unconditional Spoil';
-      const details = getEl('#book-details')?.value.trim() || 'You exist to spoil me.';
-
-      const briefText = currentLang === 'de' ?
-`PRINCESS SKYE — TRIBUT-ERKLÄRUNG
-• Finsub / Alias: ${name}
-• Social Handle: ${contact}
-• Zielkanal: ${platform}
-• Tributhöhe: ${budget}
-• Absicht / Grund: ${service}
-• Ergebene Notiz: ${details}
-• Leitsatz: "You exist to spoil me."`
-:
-`PRINCESS SKYE — TRIBUTE BRIEF
-• Finsub / Moniker: ${name}
-• Social Handle: ${contact}
-• Target Endpoint: ${platform}
-• Offering / Amount: ${budget}
-• Intent / Purpose: ${service}
-• Devotion Note: ${details}
-• Principle: "You exist to spoil me."`;
-
-      try {
-        await navigator.clipboard.writeText(briefText);
-      } catch (err) {}
-
-      if (banner) banner.classList.add('is-visible');
-      const toastMsg = translations[currentLang].toast_tribute || 'Tribute brief copied! Opening platform...';
-      showToast(toastMsg);
-
-      let targetUrl = 'https://revolut.me/skye_k08';
-      if (platform.includes('DebtKeeper')) {
-        targetUrl = 'https://debtkeeper.app/d/princess_skye';
-      } else if (platform.includes('LoyalFans')) {
-        targetUrl = 'https://www.loyalfans.com/princessskyexxx';
-      } else if (platform.includes('PayPal')) {
-        targetUrl = 'https://www.paypal.com/paypalme/princesssksyex';
-      } else if (platform.includes('Fanvue')) {
-        targetUrl = 'https://www.fanvue.com/princess_skyexx';
-      } else if (platform.includes('Amazon')) {
-        targetUrl = 'https://www.amazon.co.uk/hz/wishlist/ls/3F2XAW7VXU6D3?ref_=wl_share';
-      } else if (platform.includes('Throne')) {
-        targetUrl = 'https://throne.com/xprincessskyexx';
-      } else if (platform.includes('X Main')) {
-        targetUrl = 'https://x.com/princessskyexxx';
-      }
-
-      setTimeout(() => {
-        window.open(targetUrl, '_blank', 'noopener,noreferrer');
-      }, 750);
-    });
-  };
-
-  // --------------------------------------------------------------------------
-  // 6. HERO IMAGE CROSSFADE SWITCHER (44 Authentic Skye Photos)
+  // 6. HERO IMAGE CYCLER (44 Authentic Skye Photos)
   // --------------------------------------------------------------------------
   const initHeroImageSwitcher = () => {
     const primaryImg = getEl('#heroPrimaryImg');
-    const secondaryImg = getEl('#heroSecondaryImg');
-    if (!primaryImg || !secondaryImg) return;
+    if (!primaryImg) return;
 
     // Load all 44 optimized Princess Skye photos
     const images = Array.from({ length: 44 }, (_, i) => `assets/img/skye_${String(i + 1).padStart(2, '0')}.jpg`);
@@ -483,7 +290,6 @@
     });
 
     let currentIndex = 29; // Starts on skye_30.jpg
-    let isShowingPrimary = true;
     let timer = null;
 
     const switchImage = () => {
@@ -495,20 +301,15 @@
       currentIndex = nextIndex;
       const nextSrc = images[currentIndex];
 
-      const activeLayer = isShowingPrimary ? primaryImg : secondaryImg;
-      const incomingLayer = isShowingPrimary ? secondaryImg : primaryImg;
-
-      incomingLayer.src = nextSrc;
-      incomingLayer.classList.add('is-incoming');
-
-      requestAnimationFrame(() => {
-        incomingLayer.classList.add('is-active');
+      const preload = new Image();
+      preload.onload = () => {
+        primaryImg.classList.add('is-transitioning');
         setTimeout(() => {
-          activeLayer.classList.remove('is-active', 'is-incoming');
-          incomingLayer.classList.remove('is-incoming');
-          isShowingPrimary = !isShowingPrimary;
-        }, 1400);
-      });
+          primaryImg.src = nextSrc;
+          primaryImg.classList.remove('is-transitioning');
+        }, 400);
+      };
+      preload.src = nextSrc;
     };
 
     timer = setInterval(switchImage, 10000);
@@ -628,7 +429,6 @@
     initAgeGate();
     initNav();
     initCopyChips();
-    initBookingSystem();
     initHeroImageSwitcher();
     initMediaVault();
     initLightbox();
